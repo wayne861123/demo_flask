@@ -67,7 +67,7 @@ function toggleSidebar() {
         disease_management.textContent = "🦠";
         examination_management.textContent = "📝";
         medicine_management.textContent = "💊";
-        pasi_score.textContent = "🧮";
+        pasi_score.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="11" r="1"/><circle cx="16" cy="11" r="1"/><circle cx="8" cy="15" r="1"/><circle cx="12" cy="15" r="1"/><circle cx="16" cy="15" r="1"/><circle cx="8" cy="19" r="1"/><circle cx="12" cy="19" r="1"/><circle cx="16" cy="19" r="1"/></svg>';
     }
     if (sidebar.classList.toggle("sidebar-expand")) {
         home_page.textContent = "首頁";
