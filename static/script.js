@@ -67,7 +67,7 @@ function toggleSidebar() {
         disease_management.textContent = "🦠";
         examination_management.textContent = "📝";
         medicine_management.textContent = "💊";
-        pasi_score.textContent = "📊";
+        pasi_score.textContent = "🧮";
     }
     if (sidebar.classList.toggle("sidebar-expand")) {
         home_page.textContent = "首頁";
