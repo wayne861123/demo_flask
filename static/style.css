@@ -1,6 +1,202 @@
 /* ==========================================================================
-   醫師門診管理系統 - 金色主題樣式表
+   醫師門診管理系統 - 金色主題樣式表 (含響應式)
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Mobile - Hamburger Menu
+   -------------------------------------------------------------------------- */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background: #1a1a2e;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.mobile-menu-btn svg {
+    display: block;
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - 平板以下
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Mobile menu button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Sidebar becomes overlay */
+    .sidebar {
+        position: fixed;
+        left: -200px;
+        top: 0;
+        height: 100vh;
+        width: 200px !important;
+        z-index: 999;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.mobile-open {
+        left: 0;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+
+    /* Adjust body padding for hamburger */
+    body {
+        padding-top: 60px;
+    }
+
+    /* Container becomes full width */
+    .container {
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    /* Grid becomes 1 column */
+    .grid,
+    .info-grid,
+    .form-grid,
+    .card-grid,
+    .card-content-grid,
+    .examination-info-grid {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    /* Patient grid becomes 1 column */
+    .patient-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* History grid becomes vertical */
+    .history-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Form card becomes full width */
+    .form-card,
+    .reminder-section {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    /* Detail card becomes full width */
+    .detail-card {
+        padding: 20px !important;
+    }
+
+    /* Cards become full width */
+    .card {
+        width: 100%;
+    }
+
+    /* Tables - horizontal scroll */
+    .patient-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Sidebar menu items */
+    .sidebar a {
+        padding: 12px 20px;
+    }
+
+    /* Header text smaller */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-title {
+        font-size: 1.3rem !important;
+    }
+
+    /* Buttons full width on mobile */
+    .general-btn,
+    .view-patients-btn,
+    .patient-btn,
+    .add-btn,
+    .add-med-btn,
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Form inputs full width */
+    .form-group input,
+    .form-group select,
+    .info-input,
+    .text-input {
+        width: 100%;
+    }
+
+    /* Medication form stack */
+    .med-form {
+        flex-direction: column;
+    }
+
+    .med-form input,
+    .med-form select {
+        min-width: 100%;
+    }
+
+    /* Info items stack */
+    .info-item {
+        width: 100%;
+    }
+
+    /* Reminder section full width */
+    .reminder-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .reminder-date {
+        text-align: left;
+    }
+
+    /* Delete button full width */
+    .delete-btn {
+        display: block;
+        width: calc(100% - 30px);
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive - 大桌面 (min-width: 769px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 769px) {
+    /* Ensure sidebar shows on desktop */
+    .sidebar {
+        left: 0 !important;
+    }
+}
 
 /* --------------------------------------------------------------------------
    1. Reset & Base Styles

@@ -6,6 +6,27 @@
  */
 
 /* --------------------------------------------------------------------------
+   Mobile - Hamburger Menu
+   -------------------------------------------------------------------------- */
+function toggleMobileMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebar-overlay");
+    sidebar.classList.toggle("mobile-open");
+    if (overlay) {
+        overlay.classList.toggle("active");
+    }
+}
+
+function closeMobileMenu() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebar-overlay");
+    sidebar.classList.remove("mobile-open");
+    if (overlay) {
+        overlay.classList.remove("active");
+    }
+}
+
+/* --------------------------------------------------------------------------
    1. 側邊欄功能
    -------------------------------------------------------------------------- */
 

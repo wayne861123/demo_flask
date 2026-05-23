@@ -8,6 +8,17 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
+    <!-- Mobile Hamburger Button -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="打開選單">
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" stroke="white" stroke-width="3">
+            <line x1="0" y1="5" x2="29" y2="5"></line>
+            <line x1="0" y1="15" x2="29" y2="15"></line>
+            <line x1="0" y1="25" x2="29" y2="25"></line>
+        </svg>
+    </button>
+    <!-- Overlay -->
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="closeMobileMenu()"></div>
+
     <div id="sidebar" class="sidebar sidebar-expand">
         <ul>
             <li>
