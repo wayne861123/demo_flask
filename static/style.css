@@ -49,10 +49,11 @@
     }
 
     /* Sidebar becomes overlay - default hidden */
-    .sidebar {
-        position: fixed;
+    .sidebar,
+    .sidebar-expand {
+        position: fixed !important;
         left: -200px !important;
-        top: 0;
+        top: 0 !important;
         height: 100vh;
         width: 45vw !important;
         max-width: 200px !important;
@@ -61,8 +62,13 @@
         overflow-y: auto;
     }
 
-    .sidebar.mobile-open {
+    .sidebar.mobile-open,
+    .sidebar-expand.mobile-open {
         left: 0 !important;
+    }
+
+    .sidebar-collapse,
+    .sidebar-expand.sidebar-collapse {
         width: 45vw !important;
         max-width: 200px !important;
     }
