@@ -193,16 +193,37 @@
         display: none !important;
     }
 
-    /* Buttons full width on mobile */
-    .general-btn,
-    .view-patients-btn,
-    .patient-btn,
-    .add-btn,
-    .add-med-btn,
-    .submit-btn {
+    /* Form card becomes full width on mobile */
+    .form-card,
+    .form-card *,
+    #add-patient-form,
+    #add-patient-form * {
         width: 100% !important;
-        text-align: center;
-        box-sizing: border-box;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Make all inputs full width on mobile */
+    #add-patient-form input,
+    #add-patient-form select,
+    #add-patient-form textarea,
+    .info-input,
+    .info-item input,
+    .info-item select {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Grid becomes single column */
+    .info-grid,
+    .form-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .info-item {
+        width: 100% !important;
     }
 
     /* Form inputs full width */
