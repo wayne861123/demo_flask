@@ -46,6 +46,10 @@
     /* Mobile menu button */
     .mobile-menu-btn {
         display: block !important;
+        position: fixed !important;
+        top: 10px !important;
+        left: 10px !important;
+        z-index: 1002 !important;
     }
 
     /* Sidebar becomes overlay - default hidden */
@@ -183,9 +187,14 @@
         padding: 10px;
     }
 
-    /* Sidebar menu items */
-    .sidebar a {
+    /* Sidebar menu items - show text on mobile */
+    .sidebar li:first-child {
+        display: block !important;
+    }
+
+    .sidebar a:not([href]) {
         padding: 12px 20px;
+        display: block;
     }
 
     /* Buttons full width on mobile */

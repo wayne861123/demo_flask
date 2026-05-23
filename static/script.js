@@ -15,6 +15,19 @@ function toggleMobileMenu() {
     if (overlay) {
         overlay.classList.toggle("active");
     }
+    // Ensure text is always visible on mobile
+    if (window.innerWidth <= 768) {
+        const home_page = document.getElementById("home-page");
+        const doctor_management = document.getElementById("management-doctor");
+        const disease_management = document.getElementById("management-disease");
+        const examination_management = document.getElementById("management-examination");
+        const medicine_management = document.getElementById("management-medicine");
+        if (home_page) home_page.textContent = "首頁";
+        if (doctor_management) doctor_management.textContent = "醫師管理";
+        if (disease_management) disease_management.textContent = "疾病管理";
+        if (examination_management) examination_management.textContent = "檢查項目管理";
+        if (medicine_management) medicine_management.textContent = "藥物管理";
+    }
 }
 
 function closeMobileMenu() {
@@ -35,6 +48,11 @@ function closeMobileMenu() {
  * 收合時顯示 emoji icon，展開時顯示完整文字
  */
 function toggleSidebar() {
+    // Don't collapse on mobile - always show full menu
+    if (window.innerWidth <= 768) {
+        return;
+    }
+    
     const sidebar = document.getElementById("sidebar");
     const home_page = document.getElementById("home-page");
     const doctor_management = document.getElementById("management-doctor");
