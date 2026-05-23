@@ -187,14 +187,10 @@
         padding: 10px;
     }
 
-    /* Sidebar menu items - show text on mobile */
-    .sidebar li:first-child {
-        display: block !important;
-    }
-
-    .sidebar a:not([href]) {
-        padding: 12px 20px;
-        display: block;
+    /* Hide sidebar's own hamburger on mobile - we use our own button */
+    .sidebar li:first-child,
+    .sidebar-expand li:first-child {
+        display: none !important;
     }
 
     /* Buttons full width on mobile */
