@@ -62,6 +62,8 @@
 
     .sidebar.mobile-open {
         left: 0;
+        width: 70vw !important;
+        max-width: 280px !important;
     }
 
     .sidebar-overlay.active {
