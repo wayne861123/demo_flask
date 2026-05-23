@@ -61,7 +61,18 @@
     }
 
     .sidebar.mobile-open {
-        left: 0;
+        left: 0 !important;
+        width: 70vw !important;
+        max-width: 280px !important;
+    }
+
+    /* Force sidebar width when not expanded */
+    .sidebar {
+        width: 70vw !important;
+        max-width: 280px !important;
+    }
+
+    .sidebar-expand {
         width: 70vw !important;
         max-width: 280px !important;
     }
