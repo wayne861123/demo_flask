@@ -6,7 +6,7 @@
    Mobile - Hamburger Menu
    -------------------------------------------------------------------------- */
 .mobile-menu-btn {
-    display: none;
+    display: none !important;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -192,9 +192,12 @@
    Responsive - 大桌面 (min-width: 769px)
    -------------------------------------------------------------------------- */
 @media (min-width: 769px) {
-    /* Ensure sidebar shows on desktop */
+    /* Ensure sidebar shows on desktop and hamburger is hidden */
     .sidebar {
         left: 0 !important;
+    }
+    .mobile-menu-btn {
+        display: none !important;
     }
 }
 
