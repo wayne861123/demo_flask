@@ -172,6 +172,18 @@
         padding: 0 !important;
     }
 
+    .form-group label {
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Override base label margin-bottom for mobile */
+    body .form-group label {
+        margin-bottom: 0 !important;
+    }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
